@@ -18,9 +18,10 @@ const router = createBrowserRouter([
         index: true,
         element: <Vidios />,
       },
+      { index: 'vidios', element: <Vidios /> },
       { path: 'vidios', element: <Vidios /> },
       { path: 'vidios/:keyword', element: <Vidios /> },
-      { path: 'vidios/watcch/:vidioId', element: <VidioDetail /> },
+      { path: 'vidios/watch/:vidioId', element: <VidioDetail /> },
     ],
   },
 ]);

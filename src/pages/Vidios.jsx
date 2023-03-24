@@ -1,5 +1,7 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 export default function Vidios() {
-  return <div>Vidios</div>;
+  const { keyword } = useParams();
+  return <div>Vidios {keyword ? `🔎${keyword}` : `🔥`}</div>;
 }
