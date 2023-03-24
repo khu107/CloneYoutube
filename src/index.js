@@ -2,12 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import NotFound from './pages/NotFound';
+import Vidios from './pages/Vidios';
+import VidioDetail from './pages/VidioDetail';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        index: true,
+        element: <Vidios />,
+      },
+      { path: 'vidios', element: <Vidios /> },
+      { path: 'vidios/:keyword', element: <Vidios /> },
+      { path: 'vidios/watcch/:vidioId', element: <VidioDetail /> },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
