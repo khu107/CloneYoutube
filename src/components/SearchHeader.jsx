@@ -8,7 +8,7 @@ export default function SearchHeader() {
   const [text, setText] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/vidios/${text}`);
+    navigate(`/videos/${text}`);
   };
 
   useEffect(() => setText(keyword || ''), [keyword]);
