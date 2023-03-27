@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import VidioCard from '../components/VidioCard';
-import FakeData from '../api/fakedata';
+import FakeData from '../api/fakedataClient';
 import Youtube from '../api/youtube';
 import { useYoutubeApi } from '../context/YoutubeApiContext';
 
@@ -21,7 +21,7 @@ export default function Videos() {
       {isLoading && <p>Loading...</p>}
       {error && <p>Something is wrong</p>}
       {videos && (
-        <ul>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 gap-y-4">
           {videos.map((vidio) => (
             <VidioCard key={vidio.id} vidio={vidio} />
           ))}
