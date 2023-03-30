@@ -14,7 +14,7 @@ export default function VidioDetail() {
       <article className="bais-4/6">
         <iframe
           id="player"
-          src={`http://www.youtube.com/embed/${video.id}`}
+          src={`https://www.youtube.com/embed/${video.id}`}
           frameBorder="0"
           type="text/html"
           width="100%"
