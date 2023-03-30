@@ -1,5 +1,4 @@
 import { createContext, useContext } from 'react';
-import FakeData from '../api/fakedataClient';
 import Youtube from '../api/youtube';
 import YoutubeClient from '../api/youtubeClient';
 
